@@ -137,7 +137,7 @@ struct _GRemoteActionGroup {};
 struct _GResolverPrivate {};
 struct _GResource {};
 struct _GSeekable {};
-struct _GSettingsBackend {};
+struct _GSettingsBackendPrivate {};
 struct _GSettingsPrivate {};
 struct _GSettingsSchema {};
 struct _GSettingsSchemaKey {};
@@ -233,3 +233,5 @@ struct _GDtlsServerConnection {};
 #include <gio/gunixmounts.h>
 #include <gio/gunixoutputstream.h>
 #include <gio/gunixsocketaddress.h>
+#include <gio/gsettingsbackend.h>
+
