@@ -192,6 +192,7 @@ struct _GDtlsServerConnection {};
 #define G_SETTINGS_ENABLE_BACKEND
 #include <unistd.h>
 #include <termios.h>
+#include <sys/types.h>
 #include <glib-unix.h>
 #include <glib-object.h>
 #include <gmodule.h>
