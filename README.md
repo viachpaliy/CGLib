@@ -1,6 +1,33 @@
 # CGLib
 A wrapper around glib-2.x for Swift
 
+## Building
+
+You cannot build this package directly, as this is just a C header file wrapper for [SwiftGLib](https://github.com/rhx/SwiftGLib) that you embed into your own project (see 'Usage' below).
+
+## Usage
+
+To use CGLib, you need to use the [Swift Package Manager](https://swift.org/package-manager/).  Simply add `SwiftGLib` as a dependency to your `Package.swift` file, e.g.:
+
+```Swift
+import PackageDescription
+
+let package = Package(
+    name: "MyPackage",
+    dependencies: [
+        .Package(url: "https://github.com/rhx/SwiftGLib.git", majorVersion: 2)
+    ]
+)
+```
+
+### Example Projects
+
+You can find the following example projects on GitHub that show how to use SwiftGLib and SwiftGtk:
+
+ * [SwiftHelloGtk](https://github.com/rhx/SwiftHelloGtk)
+ * [SwiftHelloGtkBuilder](https://github.com/rhx/SwiftHelloGtkBuilder)
+ 
+
 ## Troubleshooting
 Here are some common errors you might encounter and how to fix them.
 
