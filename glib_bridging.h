@@ -237,3 +237,19 @@ struct _GDtlsServerConnection {};
 #include <gio/gunixsocketaddress.h>
 #include <gio/gsettingsbackend.h>
 
+typedef void (*GObjectNotifyQueueDispatcher) (GObject *object, guint n_pspecs, GParamSpec **pspecs);
+
+typedef struct _GObjectNotifyContext
+{
+    GQuark                       quark_notify_queue;
+    GObjectNotifyQueueDispatcher dispatcher;
+    GTrashStack                 *_nqueue_trash; /* unused */
+} GObjectNotifyContext;
+
+typedef struct _GObjectNotifyQueue
+{
+    GObjectNotifyContext *context;
+    GSList               *pspecs;
+    guint16               n_pspecs;
+    guint16               freeze_count;
+} GObjectNotifyQueue;
