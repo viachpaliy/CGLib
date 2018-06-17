@@ -193,7 +193,7 @@ struct _GDtlsServerConnection {};
 #include <unistd.h>
 #include <termios.h>
 #include <sys/types.h>
-#include <glib-unix.h>
+#include <glib-2.0/glib-unix.h>
 #include <glib-object.h>
 #include <gmodule.h>
 #include <glib/gstdio.h>
